@@ -1,0 +1,11 @@
+<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Triangle Shape -->
+  <path d="M10 40L25 10L40 40Z" fill="url(#nextjsGradient)"/>
+  <!-- Gradient Definition -->
+  <defs>
+    <linearGradient id="nextjsGradient" x1="10" y1="40" x2="40" y2="10" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#333333"/>
+      <stop offset="1" stop-color="#000000"/>
+    </linearGradient>
+  </defs>
+</svg>
