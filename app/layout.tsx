@@ -1,4 +1,7 @@
+import Navbar from '@/components/Navbar';
 import './globals.css';
+import Footer from '@/components/Footer';
+import { ThemeProvider } from '@/components/theme-provider';
 
 export const metadata = {
   title: 'My Portfolio',
@@ -11,8 +14,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navbar />
+          {children}
+          <Footer />
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
