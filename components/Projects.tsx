@@ -1,68 +1,68 @@
 import Image from "next/image"
 
+const projects = [
+    {
+        title: ['E-commerce', 'Website'],
+        icon: '/ecommerce-icon.svg',
+        screenshot: '/ecommerce-screenshot.png',
+        alt: 'E-commerce Website',
+        url: 'https://ecomwebsite-woad.vercel.app/',
+        description: 'A dynamic e-commerce platform crafted with Next.js and TypeScript, offering seamless product browsing, cart management, and secure payments for an enhanced shopping experience.',
+        tech: ['Next.js', 'TypeScript'],
+        aos: 'zoom-in',
+    },
+    {
+        title: ['Panaverse', 'DAO Clone'],
+        icon: '/panaverse-icon.svg',
+        screenshot: '/panaverse-screenshot.png',
+        alt: 'Panaverse DAO Clone',
+        url: 'https://panaverse-dao-clone-seven.vercel.app/',
+        description: 'A modern clone of the Panaverse DAO website, built using Next.js and TypeScript, featuring intuitive course listings and community engagement tools for a next-gen educational experience.',
+        tech: ['Next.js', 'TypeScript'],
+        aos: 'zoom-in',
+    },
+    {
+        title: ['Todo', 'App'],
+        icon: '/todoapp-icon.svg',
+        screenshot: '/todoapp-screenshot.png',
+        alt: 'Todo App',
+        url: 'https://todoapp-eta-lake.vercel.app/',
+        description: 'An intuitive Todo app developed with Next.js and TypeScript, empowering users to effortlessly create, edit, and manage tasks for streamlined productivity.',
+        tech: ['Next.js', 'TypeScript'],
+        aos: 'zoom-in',
+    },
+    {
+        title: ['Figma', 'Clone'],
+        icon: '/figma-icon.svg',
+        screenshot: '/figma-clone-screenshot.png',
+        alt: 'Figma Clone',
+        url: 'https://figma-clone-tau-five.vercel.app/',
+        description: 'A sleek Figma clone built with Next.js and TypeScript, delivering real-time collaborative design tools and a user-friendly interface for creative workflows.',
+        tech: ['Next.js', 'TypeScript'],
+        aos: 'zoom-in',
+    },
+    {
+        title: ['E-commerce', 'Website 2'],
+        icon: '/ecommerce-icon.svg',
+        screenshot: '/ecommerce2-screenshot.png',
+        alt: 'E-commerce Website 2',
+        url: 'https://ecom-three-roan.vercel.app/',
+        description: 'A second e-commerce platform powered by Next.js and TypeScript, designed with advanced product filtering and a user-centric experience for effortless shopping.',
+        tech: ['Next.js', 'TypeScript'],
+        aos: 'zoom-in',
+    },
+    {
+        title: ['Cloudinary', 'Photos'],
+        icon: '/cloudinary-icon.svg',
+        screenshot: '/cloudinary-photos-screenshot.png',
+        alt: 'Cloudinary Photos',
+        url: 'https://cloudinary-photos-ecru.vercel.app/',
+        description: 'A photo gallery app built with Next.js, TypeScript, and Cloudinary, enabling seamless image uploads, management, and sharing for a smooth user experience.',
+        tech: ['Next.js', 'TypeScript', 'Cloudinary'],
+        aos: 'zoom-in',
+    },
+]
 const Projects = () => {
-    const projects = [
-        {
-            title: ['E-commerce', 'Website'],
-            icon: '/ecommerce-icon.svg',
-            screenshot: '/ecommerce-screenshot.png',
-            alt: 'E-commerce Website',
-            url: 'https://ecomwebsite-woad.vercel.app/',
-            description: 'A dynamic e-commerce platform crafted with Next.js and TypeScript, offering seamless product browsing, cart management, and secure payments for an enhanced shopping experience.',
-            tech: ['Next.js', 'TypeScript'],
-            aos: 'zoom-in',
-        },
-        {
-            title: ['Panaverse', 'DAO Clone'],
-            icon: '/panaverse-icon.svg',
-            screenshot: '/panaverse-screenshot.png',
-            alt: 'Panaverse DAO Clone',
-            url: 'https://panaverse-dao-clone-seven.vercel.app/',
-            description: 'A modern clone of the Panaverse DAO website, built using Next.js and TypeScript, featuring intuitive course listings and community engagement tools for a next-gen educational experience.',
-            tech: ['Next.js', 'TypeScript'],
-            aos: 'zoom-in',
-        },
-        {
-            title: ['Todo', 'App'],
-            icon: '/todoapp-icon.svg',
-            screenshot: '/todoapp-screenshot.png',
-            alt: 'Todo App',
-            url: 'https://todoapp-eta-lake.vercel.app/',
-            description: 'An intuitive Todo app developed with Next.js and TypeScript, empowering users to effortlessly create, edit, and manage tasks for streamlined productivity.',
-            tech: ['Next.js', 'TypeScript'],
-            aos: 'zoom-in',
-        },
-        {
-            title: ['Figma', 'Clone'],
-            icon: '/figma-icon.svg',
-            screenshot: '/figma-clone-screenshot.png',
-            alt: 'Figma Clone',
-            url: 'https://figma-clone-tau-five.vercel.app/',
-            description: 'A sleek Figma clone built with Next.js and TypeScript, delivering real-time collaborative design tools and a user-friendly interface for creative workflows.',
-            tech: ['Next.js', 'TypeScript'],
-            aos: 'zoom-in',
-        },
-        {
-            title: ['E-commerce', 'Website 2'],
-            icon: '/ecommerce-icon.svg',
-            screenshot: '/ecommerce2-screenshot.png',
-            alt: 'E-commerce Website 2',
-            url: 'https://ecom-three-roan.vercel.app/',
-            description: 'A second e-commerce platform powered by Next.js and TypeScript, designed with advanced product filtering and a user-centric experience for effortless shopping.',
-            tech: ['Next.js', 'TypeScript'],
-            aos: 'zoom-in',
-        },
-        {
-            title: ['Cloudinary', 'Photos'],
-            icon: '/cloudinary-icon.svg',
-            screenshot: '/cloudinary-photos-screenshot.png',
-            alt: 'Cloudinary Photos',
-            url: 'https://cloudinary-photos-ecru.vercel.app/',
-            description: 'A photo gallery app built with Next.js, TypeScript, and Cloudinary, enabling seamless image uploads, management, and sharing for a smooth user experience.',
-            tech: ['Next.js', 'TypeScript', 'Cloudinary'],
-            aos: 'zoom-in',
-        },
-    ]
 
     return (
         <section
@@ -119,15 +119,14 @@ const Projects = () => {
                             {project.tech.map((tech, index) => (
                                 <span
                                     key={index}
-                                    className={`px-3 py-1 rounded-full text-sm font-medium transition-colors transition-transform duration-300 ${
-                                        tech === 'Next.js'
+                                    className={`px-3 py-1 rounded-full text-sm font-medium transition-colors transition-transform duration-300 ${tech === 'Next.js'
                                             ? 'bg-primary/20 text-primary'
                                             : tech === 'TypeScript'
-                                            ? 'bg-secondary/20 text-secondary'
-                                            : tech === 'Cloudinary'
-                                            ? 'bg-accent/20 text-accent animate-pulse'
-                                            : 'bg-muted/20 text-muted-foreground'
-                                    }`}
+                                                ? 'bg-secondary/20 text-secondary'
+                                                : tech === 'Cloudinary'
+                                                    ? 'bg-accent/20 text-accent animate-pulse'
+                                                    : 'bg-muted/20 text-muted-foreground'
+                                        }`}
                                 >
                                     {tech}
                                 </span>

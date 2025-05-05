@@ -98,4 +98,34 @@ a {
   body {
     @apply bg-background text-foreground;
   }
+
+  .bubble {
+    position: absolute;
+    bottom: -50px;
+    background: rgba(99, 102, 241, 0.3);
+    border-radius: 9999px;
+    animation: float-bubble linear infinite;
+    z-index: 0;
+  }
+  
+  .list-item {
+    font-size: 1rem;
+    line-height: 2rem;
+    color: #333;
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .list-item::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #6366f1;
+    font-size: 1.5rem;
+  }
+  
+  .text-gray {
+    color: #333;
+  }
 }

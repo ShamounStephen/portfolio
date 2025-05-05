@@ -1,24 +1,24 @@
 import React from 'react'
 
+const contactInfo = [
+  {
+    label: 'Email',
+    value: 'shamounstephen023@gmail.com',
+    href: 'mailto:shamounstephen023@gmail.com',
+    aos: 'fade-up',
+    aosDelay: '200',
+  },
+  {
+    label: 'LinkedIn',
+    value: 'linkedin.com/in/shamounstephen',
+    href: 'https://linkedin.com/in/shamounstephen',
+    target: '_blank',
+    rel: 'noopener noreferrer',
+    aos: 'fade-up',
+    aosDelay: '300',
+  },
+]
 const Contact = () => {
-  const contactInfo = [
-    {
-      label: 'Email',
-      value: 'shamounstephen023@gmail.com',
-      href: 'mailto:shamounstephen023@gmail.com',
-      aos: 'fade-up',
-      aosDelay: '200',
-    },
-    {
-      label: 'LinkedIn',
-      value: 'linkedin.com/in/shamounstephen',
-      href: 'https://linkedin.com/in/shamounstephen',
-      target: '_blank',
-      rel: 'noopener noreferrer',
-      aos: 'fade-up',
-      aosDelay: '300',
-    },
-  ]
 
   return (
     <section

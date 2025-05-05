@@ -1,26 +1,26 @@
 import React from 'react'
 
+const socialLinks = [
+  {
+    platform: 'GitHub',
+    href: 'https://github.com/ShamounStephen',
+    icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg',
+    alt: 'GitHub',
+  },
+  {
+    platform: 'LinkedIn',
+    href: 'https://linkedin.com/in/shamounstephen',
+    icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linkedin.svg',
+    alt: 'LinkedIn',
+  },
+  {
+    platform: 'Twitter',
+    href: 'https://twitter.com/shamounstephen',
+    icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/x.svg',
+    alt: 'Twitter',
+  },
+]
 const Footer = () => {
-  const socialLinks = [
-    {
-      platform: 'GitHub',
-      href: 'https://github.com/ShamounStephen',
-      icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg',
-      alt: 'GitHub',
-    },
-    {
-      platform: 'LinkedIn',
-      href: 'https://linkedin.com/in/shamounstephen',
-      icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linkedin.svg',
-      alt: 'LinkedIn',
-    },
-    {
-      platform: 'Twitter',
-      href: 'https://twitter.com/shamounstephen',
-      icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/x.svg',
-      alt: 'Twitter',
-    },
-  ]
 
   return (
     <footer

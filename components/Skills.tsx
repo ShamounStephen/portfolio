@@ -1,14 +1,14 @@
 import React from 'react'
 
+const skills = [
+    { name: 'Python', emoji: '🐍', width: '90%', aos: 'fade-left' },
+    { name: 'JavaScript', emoji: '📜', width: '85%', aos: 'fade-right' },
+    { name: 'TypeScript', emoji: '💻', width: '80%', aos: 'fade-left' },
+    { name: 'Next.js', emoji: '⚡', width: '90%', aos: 'fade-right' },
+    { name: 'AI Development', emoji: '🤖', width: '75%', aos: 'fade-left' },
+    { name: 'Docker', emoji: '🐳', width: '80%', aos: 'fade-right' },
+]
 const Skills = () => {
-    const skills = [
-        { name: 'Python', emoji: '🐍', width: '90%', aos: 'fade-left' },
-        { name: 'JavaScript', emoji: '📜', width: '85%', aos: 'fade-right' },
-        { name: 'TypeScript', emoji: '💻', width: '80%', aos: 'fade-left' },
-        { name: 'Next.js', emoji: '⚡', width: '90%', aos: 'fade-right' },
-        { name: 'AI Development', emoji: '🤖', width: '75%', aos: 'fade-left' },
-        { name: 'Docker', emoji: '🐳', width: '80%', aos: 'fade-right' },
-    ]
 
     return (
         <section
