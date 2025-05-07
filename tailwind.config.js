@@ -20,12 +20,14 @@ module.exports = {
 				sm: 'calc(var(--radius) - 4px)',
 			},
 			colors: {
+				
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))',
 				},
+				purple: "#CBACF9",
 				popover: {
 					DEFAULT: 'hsl(var(--popover))',
 					foreground: 'hsl(var(--popover-foreground))',

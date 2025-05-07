@@ -1,8 +1,9 @@
 import About from "@/components/About";
-import Certifications from "@/components/Certifications";
+import Approach from "@/components/Approach";
 import Contact from "@/components/Contact";
+// import Experience from "@/components/Experience";
 import HeroSection from "@/components/HeroSection";
-import Projects from "@/components/Projects";
+import RecentProjects from "@/components/RecentProjects";
 import Skills from "@/components/Skills";
 
 
@@ -11,9 +12,10 @@ export default function Home() {
     <div>
       <HeroSection/>
       <About />
+      <RecentProjects/>
       <Skills />
-      <Projects />
-      <Certifications />
+      {/* <Experience/> */}
+      <Approach/>
       <Contact />
     </div>
   );

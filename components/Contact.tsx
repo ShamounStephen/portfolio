@@ -1,75 +1,67 @@
-import React from 'react'
+'use client'
+import { IoCopyOutline } from "react-icons/io5";
+import Lottie from "react-lottie";
+import MagicButton from "./MagicButton";
+import React, { useState } from 'react';
+import animationData from "@/data/confetti.json";
 
-const contactInfo = [
-  {
-    label: 'Email',
-    value: 'shamounstephen023@gmail.com',
-    href: 'mailto:shamounstephen023@gmail.com',
-    aos: 'fade-up',
-    aosDelay: '200',
-  },
-  {
-    label: 'LinkedIn',
-    value: 'linkedin.com/in/shamounstephen',
-    href: 'https://linkedin.com/in/shamounstephen',
-    target: '_blank',
-    rel: 'noopener noreferrer',
-    aos: 'fade-up',
-    aosDelay: '300',
-  },
-]
 const Contact = () => {
+  const [copied, setCopied] = useState(false);
+  const defaultOptions = {
+    loop: copied,
+    autoplay: copied,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+
+  const handleCopy = () => {
+    const text = "shamounstephen023@gmail.com";
+    navigator.clipboard.writeText(text);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000); // Reset after 2 seconds
+  };
 
   return (
     <section
       id="contact"
       className="relative py-20 px-4 text-center bg-gradient-to-b from-[hsl(var(--gradient-start))/0.8] to-[hsl(var(--gradient-end))/0.8]"
     >
-      <h2
-        className="inline-block font-Poppins font-bold text-4xl mb-12 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent animate-gradient-shift relative
-                   after:content-[''] after:absolute after:bottom-[-0.5rem] after:left-0 after:w-full after:h-[4px] after:bg-gradient-to-r after:from-primary after:to-secondary after:rounded"
+       <h1 className="heading">
+        GET IN{" "}
+        <span className="text-purple">TOUCH</span>
+      </h1>
+      <p
+        className="max-w-2xl mx-auto text-lg leading-8 text-custom-gray mb-12"
         data-aos="fade-up"
+        data-aos-delay="200"
       >
-        Contact Me
-      </h2>
-      {contactInfo.map((info) => (
-        <p
-          key={info.label}
-          className="max-w-xl mx-auto mb-4 text-lg text-custom-gray"
-          data-aos={info.aos}
-          data-aos-delay={info.aosDelay}
-        >
-          {info.label}: <a href={info.href} className="text-primary hover:text-secondary transition-colors" target={info.target} rel={info.rel}>{info.value}</a>
-        </p>
-      ))}
-      <div className="max-w-xl mx-auto flex flex-col gap-4" data-aos="fade-up" data-aos-delay="400">
-        <input
-          type="text"
-          placeholder="Your Name"
-          required
-          className="p-3 text-base border border-border/20 rounded-lg bg-card/10 backdrop-blur-lg text-custom-gray focus:border-primary focus:outline-none"
-        />
-        <input
-          type="email"
-          placeholder="Your Email"
-          required
-          className="p-3 text-base border border-border/20 rounded-lg bg-card/10 backdrop-blur-lg text-custom-gray focus:border-primary focus:outline-none"
-        />
-        <textarea
-          placeholder="Your Message"
-          required
-          className="p-3 text-base border border-border/20 rounded-lg bg-card/10 backdrop-blur-lg text-custom-gray focus:border-primary focus:outline-none min-h-[150px] resize-y"
-        ></textarea>
-        <button
-          type="submit"
-          className="px-6 py-3 text-base font-medium text-primary-foreground bg-gradient-to-r from-primary to-secondary rounded-lg hover:-translate-y-1 hover:shadow-md transition-transform transition-shadow duration-300"
-        >
-          Send Message
-        </button>
+        Ready to collaborate or have a question? Reach out by copying my email address below and let’s start the conversation!
+      </p>
+      <div
+        className="max-w-md mx-auto grid grid-cols-1 place-items-center"
+        data-aos="fade-up"
+        data-aos-delay="400"
+      >
+        <div className="relative">
+          <div
+            className={`absolute -bottom-5 right-0 ${copied ? "block" : "hidden"}`}
+          >
+            <Lottie options={defaultOptions} height={200} width={400} />
+          </div>
+          <MagicButton
+            title={copied ? "Email is Copied!" : "Copy my email address"}
+            icon={<IoCopyOutline />}
+            position="left"
+            handleClick={handleCopy}
+            otherClasses="!bg-[#161A31]"
+          />
+        </div>
       </div>
       <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-secondary opacity-30"></div>
     </section>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

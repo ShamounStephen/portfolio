@@ -1,19 +1,17 @@
 
-import React from 'react';
+
 
 const About = () => {
+
     return (
         <section
             id="about"
             className="relative py-20 px-4 text-center "
         >
-            <h2
-                className="inline-block font-['Poppins'] font-bold text-4xl mb-12 bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent animate-gradient-shift relative
-                   after:content-[''] after:absolute after:bottom-[-0.5rem] after:left-0 after:w-full after:h-1 after:bg-gradient-to-r after:from-[#6366f1] after:to-[#a855f7] after:rounded"
-                data-aos="fade-up"
-            >
-                About Me
-            </h2>
+            <h1 className="heading mb-4">
+                <span className="text-purple">About </span>
+                Me
+            </h1>
             <div className="relative overflow-hidden">
                 {/* Floating Bubbles */}
                 <div className="absolute bottom-[-50px] right-[10%] w-5 h-5 bg-[#6366f1] rounded-full animate-float-bubble duration-[9s] delay-3000 z-0"></div>
