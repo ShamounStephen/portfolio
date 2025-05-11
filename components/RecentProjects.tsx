@@ -2,13 +2,18 @@
 
 import { FaLocationArrow } from "react-icons/fa6";
 import { PinContainer } from "./ui/Pin";
+import Image from "next/image";
+import ecomImage from '@/assests/ecommerce-screenshot.png'
+import PanaImage from '@/assests/panaverse-screenshot.png'
+import todoImage from '@/assests/todoapp-screenshot.png'
+import figmaImage from '@/assests/figma-clone-screenshot.png'
 
 export const projects = [
   {
     id: 1,
     title: "E-commerce Website",
     des: "A dynamic e-commerce platform crafted with Next.js and TypeScript, offering seamless product browsing, cart management, and secure payments for an enhanced shopping experience.",
-    img: "/ecommerce-screenshot.png",
+    img: ecomImage,
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
     link: "https://ecomwebsite-woad.vercel.app/",
   },
@@ -16,7 +21,7 @@ export const projects = [
     id: 2,
     title: "Panaverse DAO Clone",
     des: "A modern clone of the Panaverse DAO website, built using Next.js and TypeScript, featuring intuitive course listings and community engagement tools for a next-gen educational experience.",
-    img: "/panaverse-screenshot.png",
+    img: PanaImage,
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
     link: "https://panaverse-dao-clone-seven.vercel.app/",
   },
@@ -24,7 +29,7 @@ export const projects = [
     id: 3,
     title: "Todo App",
     des: "An intuitive Todo app developed with Next.js and TypeScript, empowering users to effortlessly create, edit, and manage tasks for streamlined productivity.",
-    img: "/todoapp-screenshot.png",
+    img: todoImage,
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
     link: "https://todoapp-eta-lake.vercel.app/",
   },
@@ -32,7 +37,7 @@ export const projects = [
     id: 4,
     title: "Figma Clone",
     des: "A sleek Figma clone built with Next.js and TypeScript, delivering real-time collaborative design tools and a user-friendly interface for creative workflows.",
-    img: "/figma-clone-screenshot.png",
+    img: figmaImage,
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
     link: "https://figma-clone-tau-five.vercel.app/",
   },
@@ -58,12 +63,10 @@ const RecentProjects = () => {
                     className="relative w-full h-full overflow-hidden lg:rounded-3xl"
                     style={{ backgroundColor: "#13162D" }}
                   >
-                    <img src="/bg.png" alt="bgimg" />
+                    <Image src="/bg.png" alt="bgimg" width={100} height={100} />
                   </div>
-                  <img
-                    src={item.img}
-                    alt="cover"
-                    className="z-10 absolute bottom-0"
+                  <Image
+                    src={item.img} alt='' className="z-10 absolute bottom-0" height={550} width={550}
                   />
                 </div>
 
@@ -74,7 +77,7 @@ const RecentProjects = () => {
                 <p
                   className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2"
                   style={{
-                    color: "#BEC1DD",
+                    color: "#989AB1",
                     margin: "1vh 0",
                   }}
                 >
@@ -91,7 +94,7 @@ const RecentProjects = () => {
                           transform: `translateX(-${5 * index + 2}px)`,
                         }}
                       >
-                        <img src={icon} alt="icon5" className="p-2" />
+                        <img src={icon} className="p-2" alt="" />
                       </div>
                     ))}
                   </div>

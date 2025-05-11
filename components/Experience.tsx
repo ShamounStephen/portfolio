@@ -4,54 +4,62 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import TitleHeader from "./TitleHeader";
 import GlowCard from "./GlowCard";
+import Image, { StaticImageData } from "next/image";
+import exp1 from '@/assests/images/exp1.png'
+import exp2 from '@/assests/images/exp2.png'
+import exp3 from '@/assests/images/exp3.png'
+import logo1 from '@/assests/images/logo1.png'
+import logo2 from '@/assests/images/logo2.png'
+import logo3 from '@/assests/images/logo3.png'
 
 interface ExpCard {
   review: string;
-  imgPath: string;
-  logoPath: string;
+  imgPath: StaticImageData;
+  logoPath: StaticImageData;
   title: string;
   date: string;
-  responsibilities: string[];
+  responsibilities: Array<String>;
 }
 
 const expCards: ExpCard[] = [
   {
-    review: "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
-    imgPath: "/images/exp1.png",
-    logoPath: "/images/logo1.png",
+    review: "Shamoun Stephen brought creativity and technical expertise to the team, significantly enhancing our frontend with React. His work delivered faster and more interactive user experiences.",
+    imgPath: exp1,
+    logoPath: logo1,
     title: "Frontend Developer",
-    date: "January 2023 - Present",
+    date: "January 2025 - May 2025",
     responsibilities: [
-      "Developed and maintained user-facing features for the Hostinger website.",
-      "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
-      "Optimized web applications for maximum speed and scalability.",
+      "Built and maintained dynamic user interfaces for the Hostinger website using React.",
+      "Collaborated with UI/UX designers to implement responsive and accessible React components.",
+      "Optimized React applications for performance, focusing on efficient state management and rendering.",
     ],
   },
   {
-    review: "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
-    imgPath: "/images/exp2.png",
-    logoPath: "/images/logo2.png",
+    review: "Shamoun Stephen’s expertise with PostgreSQL in Docker's web applications was outstanding. His database solutions ensured robust and scalable systems.",
+    imgPath: exp2,
+    logoPath: logo2,
     title: "Full Stack Developer",
-    date: "June 2020 - December 2023",
+    date: "June 2023 - December 2024",
     responsibilities: [
-      "Led the development of Docker's web applications, focusing on scalability.",
-      "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
-      "Contributed to open-source projects that were used with the Docker ecosystem.",
+      "Designed and optimized PostgreSQL databases for Docker's web applications to ensure scalability.",
+      "Integrated PostgreSQL with backend APIs, enabling seamless data flow to the frontend.",
+      "Contributed to open-source PostgreSQL tools used within the Docker ecosystem.",
     ],
   },
   {
-    review: "Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
-    imgPath: "/images/exp3.png",
-    logoPath: "/images/logo3.png",
-    title: "React Native Developer",
-    date: "March 2019 - May 2020",
+    review: "Shamoun Stephen’s work on Appwrite’s infrastructure brought a high level of quality and efficiency. He delivered solutions that enhanced our deployment pipelines and met our scalability goals.",
+    imgPath: exp3,
+    logoPath: logo3,
+    title: "DevOps Developer",
+    date: "March 2023 - May 2023",
     responsibilities: [
-      "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
-      "Improved app performance and user experience through code optimization and testing.",
-      "Coordinated with the product team to implement features based on feedback.",
+      "Implemented CI/CD pipelines using Docker to streamline Appwrite's deployment processes.",
+      "Optimized infrastructure performance through monitoring, automation, and testing.",
+      "Collaborated with the development team to ensure scalable and reliable backend services.",
     ],
   },
 ];
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -153,7 +161,7 @@ const Experience: React.FC = () => {
                 <div className="xl:w-2/6">
                   <GlowCard card={card} index={0}>
                     <div>
-                      <img src={card.imgPath} alt="exp-img" />
+                      <Image src={card.imgPath} alt="exp-img" height={100} width={100} />
                     </div>
                   </GlowCard>
                 </div>
@@ -165,7 +173,7 @@ const Experience: React.FC = () => {
                     </div>
                     <div className="expText flex xl:gap-20 md:gap-10 gap-5 relative z-20">
                       <div className="timeline-logo">
-                        <img src={card.logoPath} alt="logo" />
+                        <Image src={card.logoPath} alt="logo" height={75} width={75}/>
                       </div>
                       <div>
                         <h1 className="font-semibold text-3xl">{card.title}</h1>
