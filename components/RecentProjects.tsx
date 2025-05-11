@@ -7,6 +7,7 @@ import ecomImage from '@/assests/ecommerce-screenshot.png'
 import PanaImage from '@/assests/panaverse-screenshot.png'
 import todoImage from '@/assests/todoapp-screenshot.png'
 import figmaImage from '@/assests/figma-clone-screenshot.png'
+import bgImage from '@/assests/bg.png'
 
 export const projects = [
   {
@@ -45,7 +46,7 @@ export const projects = [
 
 const RecentProjects = () => {
   return (
-    <div className="py-20">
+    <div className="py-20" id='projects'>
       <h1 className="heading">
         A small selection of{" "}
         <span className="text-purple">recent projects</span>
@@ -63,7 +64,7 @@ const RecentProjects = () => {
                     className="relative w-full h-full overflow-hidden lg:rounded-3xl"
                     style={{ backgroundColor: "#13162D" }}
                   >
-                    <Image src="/bg.png" alt="bgimg" width={100} height={100} />
+                    <Image src={bgImage} alt="bgimg" width={100} height={100} />
                   </div>
                   <Image
                     src={item.img} alt='' className="z-10 absolute bottom-0" height={550} width={550}

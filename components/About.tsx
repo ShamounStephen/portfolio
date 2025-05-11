@@ -14,12 +14,12 @@ const About = () => {
             </h1>
             <div className="relative overflow-hidden">
                 {/* Floating Bubbles */}
-                <div className="absolute bottom-[-50px] right-[10%] w-5 h-5 bg-[#6366f1] rounded-full animate-float-bubble duration-[9s] delay-3000 z-0"></div>
-                <div className="absolute bottom-[-50px] right-[25%] w-8 h-8 bg-[#6366f1] rounded-full animate-float-bubble duration-[7s] delay-2000 z-0"></div>
-                <div className="absolute bottom-[-50px] right-[35%] w-16 h-16 bg-[#6366f1] rounded-full animate-float-bubble duration-[7s] delay-2000 z-0"></div>
-                <div className="absolute bottom-[-50px] left-[10%] w-10 h-10 bg-[#6366f1] rounded-full animate-float-bubble duration-[8s] z-0"></div>
-                <div className="absolute bottom-[-50px] left-[50%] w-12 h-12 bg-[#6366f1] rounded-full animate-float-bubble duration-[6s] z-0"></div>
-                <div className="absolute bottom-[-50px] left-[20%] w-16 h-16 bg-[#6366f1] rounded-full animate-float-bubble duration-[5s] delay-1000 z-0"></div>
+                <div className="absolute bottom-[-50px] right-[10%] w-5 h-5 bg-[#6366f1] rounded-full animate-float-bubble delay-3000 z-0"></div>
+                <div className="absolute bottom-[-50px] right-[25%] w-8 h-8 bg-[#6366f1] rounded-full animate-float-bubble  delay-2000 z-0"></div>
+                <div className="absolute bottom-[-50px] right-[35%] w-16 h-16 bg-[#6366f1] rounded-full animate-float-bubble  delay-2000 z-0"></div>
+                <div className="absolute bottom-[-50px] left-[10%] w-10 h-10 bg-[#6366f1] rounded-full animate-float-bubble  z-0"></div>
+                <div className="absolute bottom-[-50px] left-[50%] w-12 h-12 bg-[#6366f1] rounded-full animate-float-bubble  z-0"></div>
+                <div className="absolute bottom-[-50px] left-[20%] w-16 h-16 bg-[#6366f1] rounded-full animate-float-bubble  delay-1000 z-0"></div>
 
                 <div
                     className="max-w-3xl mx-auto text-left bg-white/10 p-8 rounded-2xl shadow-lg backdrop-blur-lg border border-white/20 relative z-10"
