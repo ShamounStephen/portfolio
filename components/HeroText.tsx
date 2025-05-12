@@ -49,7 +49,7 @@ const HeroText = () => {
             animate="visible"
             transition={{ delay: 1.8 }}
           >
-            Web Solutions
+            Web AI solutions 
           </motion.p>
         </div>
       </div>
@@ -92,7 +92,7 @@ const HeroText = () => {
             animate="visible"
             transition={{ delay: 1.8 }}
           >
-            Web Applications
+            Web AI Applications
           </motion.p>
         </div>
       </div>
