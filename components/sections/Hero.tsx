@@ -1,14 +1,14 @@
 "use client";
 
 import { Canvas, useFrame } from "@react-three/fiber";
-import HeroText from "./HeroText";
-import ParallaxBackground from "./parallaxBackground";
-import { Astronaut } from "../components/Astronaut";
+import HeroText from "../HeroText";
+import ParallaxBackground from "../parallaxBackground";
+import { Astronaut } from "../Astronaut";
 import { Float } from "@react-three/drei";
 import { useMediaQuery } from "react-responsive";
 import { easing } from "maath";
 import { Suspense } from "react";
-import Loader from "./Loader";
+import Loader from "../Loader";
 import { FC } from "react";
 
 const Hero: FC = () => {

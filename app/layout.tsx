@@ -1,6 +1,6 @@
-import Navbar from '@/components/Navbar';
+import Navbar from '@/components/sections/Navbar';
 import './globals.css';
-import Footer from '@/components/Footer';
+import Footer from '@/components/sections/Footer';
 import { ThemeProvider } from '@/components/ui/theme-provider';
 
 export const metadata = {

@@ -17,12 +17,12 @@ const About = () => {
         </h1>
         <div className="relative overflow-hidden">
           {/* Floating Bubbles */}
-          <div className="absolute bottom-[-50px] right-[10%] w-5 h-5 bg-[#6366f1] rounded-full animate-float-bubble delay-3000 z-0"></div>
-          <div className="absolute bottom-[-50px] right-[25%] w-8 h-8 bg-[#6366f1] rounded-full animate-float-bubble delay-2000 z-0"></div>
-          <div className="absolute bottom-[-50px] right-[35%] w-16 h-16 bg-[#6366f1] rounded-full animate-float-bubble delay-2000 z-0"></div>
-          <div className="absolute bottom-[-50px] left-[10%] w-10 h-10 bg-[#6366f1] rounded-full animate-float-bubble z-0"></div>
-          <div className="absolute bottom-[-50px] left-[50%] w-12 h-12 bg-[#6366f1] rounded-full animate-float-bubble z-0"></div>
-          <div className="absolute bottom-[-50px] left-[20%] w-16 h-16 bg-[#6366f1] rounded-full animate-float-bubble delay-1000 z-0"></div>
+          <div className=" floating-bubble right-[10%] w-5 h-5 delay-3000 z-0"></div>
+          <div className="floating-bubble right-[25%] w-8 h-8 delay-2000 z-0"></div>
+          <div className="floating-bubble right-[35%] w-16 h-16 delay-2000 z-0"></div>
+          <div className="floating-bubble left-[10%] w-10 h-10 z-0"></div>
+          <div className="floating-bubble left-[50%] w-12 h-12 z-0"></div>
+          <div className="floating-bubble left-[20%] w-16 h-16 delay-1000 z-0"></div>
   
           <div
             className="max-w-3xl mx-auto text-left bg-white/10 p-8 rounded-2xl shadow-lg backdrop-blur-lg border border-white/20 relative z-10"

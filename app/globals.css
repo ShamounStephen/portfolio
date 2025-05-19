@@ -302,6 +302,10 @@
     }
   }
 
+  .floating-bubble{
+    @apply absolute bottom-[-50px]  bg-[#6366f1] rounded-full animate-float-bubble 
+
+  }
   .cta-wrapper {
     @apply relative z-20 cursor-pointer;
   }

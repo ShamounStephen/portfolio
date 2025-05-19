@@ -2,8 +2,8 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import TitleHeader from "./TitleHeader";
-import GlowCard from "./GlowCard";
+import TitleHeader from "../TitleHeader";
+import GlowCard from "../GlowCard";
 import Image, { StaticImageData } from "next/image";
 import exp1 from '@/assests/images/exp1.png'
 import exp2 from '@/assests/images/exp2.png'
