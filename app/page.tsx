@@ -3,7 +3,7 @@ import Approach from "@/components/sections/Approach";
 import Contact from "@/components/sections/Contact";
 import Experience from "@/components/sections/Experience";
 import Hero from "@/components/sections/Hero";
-import RecentProjects from "@/components/RecentProjects";
+import RecentProjects from "@/components/sections/RecentProjects";
 
 
 export default function Home() {
